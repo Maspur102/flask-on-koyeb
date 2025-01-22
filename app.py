@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, flash, redirect
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -26,20 +26,10 @@ def home():
                 return render_template('testimonials.html')
 
                 # Route untuk halaman "Kontak"
-                @app.route('/contact', methods=['GET', 'POST'])
+                @app.route('/contact')
                 def contact():
-                    if request.method == 'POST':
-                            name = request.form.get('name')
-                                    email = request.form.get('email')
-                                            message = request.form.get('message')
-                                                    
-                                                            # Tampilkan pesan berhasil
-                                                                    flash("Pesan Anda telah berhasil diterima. Terima kasih atas masukan Anda!")
+                    return render_template('contact.html')
 
-                                                                            return redirect('/contact')  # Kembali ke halaman kontak
-
-                                                                                return render_template('contact.html')
-
-                                                                                if __name__ == '__main__':
-                                                                                    app.run(debug=True)
-                                                                                    
+                    if __name__ == '__main__':
+                        app.run(debug=True)
+                        
