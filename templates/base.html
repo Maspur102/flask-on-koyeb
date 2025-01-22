@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>{% block title %}Company Profile{% endblock %}</title>
+                <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+                        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+                        </head>
+                        <body>
+                            <header>
+                                    <nav class="navbar">
+                                              <a href="/" class="navbar-brand">
+                                                              <img src="{{ url_for('static', filename='images/LogoRB.png') }}" alt="Logo" class="logo">
+                                                                          </a>
+                                                                                      <!-- Tombol Hamburger -->
+                                                                                                  <div class="hamburger" id="hamburger">
+                                                                                                                  &#9776;  <!-- Simbol garis tiga -->
+                                                                                                                              </div>
+                                                                                                                                          <div class="navbar-links" id="navbar-links">
+                                                                                                                                              <a href="/"><i class="fas fa-home"></i> Home</a>
+                                                                                                                                                  <a href="/about"><i class="fas fa-info-circle"></i> Tentang Kami</a>
+                                                                                                                                                      <a href="/services"><i class="fas fa-cogs"></i> Layanan</a>
+                                                                                                                                                          <a href="/testimonials"><i class="fas fa-comments"></i> Testimoni</a>
+                                                                                                                                                              <a href="/contact"><i class="fas fa-envelope"></i> Kontak</a>
+                                                                                                                                                              </div>
+
+                                                                                                                                                                      </nav>
+                                                                                                                                                                          </header>
+
+                                                                                                                                                                              <main>
+                                                                                                                                                                                      {% block content %}{% endblock %}
+                                                                                                                                                                                          </main>
+
+                                                                                                                                                                                              <footer>
+                                                                                                                                                                                                      <p>&copy; 2025 WebDev Pro. <a href="#">Privacy Policy</a></p>
+                                                                                                                                                                                                          </footer>
+
+                                                                                                                                                                                                              <script src="{{ url_for('static', filename='js/script.js') }}">
+                                                                                                                                                                                                                  </script>
+                                                                                                                                                                                                                  </body>
+                                                                                                                                                                                                                  </html>
+                                                                                                                                                                                                                  
