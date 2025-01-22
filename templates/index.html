@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Company Profile{% endblock %}
+
+{% block content %}
+
+<section>
+    <h2>Layanan Kami</h2>
+        <p>Solusi lengkap untuk desain, pengembangan, dan pengelolaan website.</p>
+            <div class="key-services">
+                    <div class="gb1">
+                                <img src="{{ url_for('static', filename='images/Gambar1.jpeg') }}" alt="Layanan 1">
+                                            <h3>Desain Website</h3>
+                                                        <p>Website elegan dan responsif sesuai kebutuhan Anda.</p>
+                                                                </div>
+                                                                        <div class="gb2">
+                                                                                    <img src="{{ url_for('static', filename='images/Gambar2.jpeg') }}" alt="Layanan 2">
+                                                                                                <h3>Pengembangan Aplikasi</h3>
+                                                                                                            <p>Membangun aplikasi berbasis web yang canggih dan mudah digunakan.</p>
+                                                                                                                    </div>
+                                                                                                                            <div class="gb3">
+                                                                                                                                        <img src="{{ url_for('static', filename='images/Gambar3.jpeg') }}" alt="Layanan 3">
+                                                                                                                                                    <h3>SEO & Digital Marketing</h3>
+                                                                                                                                                                <p>Meningkatkan visibilitas bisnis Anda di mesin pencari.</p>
+                                                                                                                                                                        </div>
+                                                                                                                                                                            </div>
+                                                                                                                                                                            </section>
+                                                                                                                                                                            {% endblock %}
+                                                                                                                                                                            
